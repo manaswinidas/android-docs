@@ -17,7 +17,8 @@ const productPageOrder = {
     'offline',
     'query',
     'runtime-styling',
-    'gestures'
+    'gestures',
+    'snapshotter'
   ],
   'map-sdk/examples/': ['index'],
   'map-sdk/tutorials/': ['index'],
