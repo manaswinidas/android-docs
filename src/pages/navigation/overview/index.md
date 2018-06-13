@@ -1,13 +1,6 @@
 ---
-title: "Navigation SDK"
+title: "Introduction"
 description: "Official documentation and overview of the Mapbox Navigation SDK for Android."
-sideNavSections:
-  - title: "Overview"
-  - title: "Install the Navigation SDK"
-  - title: "MapboxNavigation Object"
-  - title: "LocationEngine"
-  - title: "Lifecycle Methods"
-  - title: "Navigation Running"
 overviewHeaderProps:
   imageId: overviewNavigationSdk
   sdk: Navigation SDK
@@ -19,12 +12,6 @@ overviewHeaderProps:
     - Snap-to-Route
     - Route Progress Information
     - Traffic Routing
-  newFeature:
-    - false
-    - false
-    - false
-    - false
-    - false
 prependJs:
   - "import { NAVIGATION_VERSION } from '../../../constants';"
 ---
@@ -89,31 +76,31 @@ For increasing the likelihood that the route you receive starts off in the same 
 Point origin = Point.fromLngLat(-77.03613, 38.90992);
 Point destination = Point.fromLngLat(-77.0365, 38.8977);
 
-NavigationRoute.builder(this)
-    .accessToken(Mapbox.getAccessToken())
-    .origin(origin)
-    .destination(destination)
-    .build()
-    .getRoute(new Callback<DirectionsResponse>() {
-      @Override
-      public void onResponse(Call<DirectionsResponse> call, Response<DirectionsResponse> response) {
+NavigationRoute.builder()
+      .accessToken(Mapbox.getAccessToken())
+      .origin(origin)
+      .destination(destination)
+      .build()
+      .getRoute(new Callback<DirectionsResponse>() {
+        @Override
+        public void onResponse(Call<DirectionsResponse> call, Response<DirectionsResponse> response) {
 
-      }
+        }
 
-      @Override
-      public void onFailure(Call<DirectionsResponse> call, Throwable t) {
+        @Override
+        public void onFailure(Call<DirectionsResponse> call, Throwable t) {
 
-      }
-    });
+        }
+      });
 ```
 
 If your navigation involves a bunch of pick-up and drop-off points, you can add up to 25 coordinates to the `NavigationRoute` builder; these are considered stops in between the origin and destination `Position`s (in the order that you add them - first waypoint is the first stop):
 
 ```java
-NavigationRoute.Builder builder = NavigationRoute.builder(this)
-    .accessToken(Mapbox.getAccessToken())
-    .origin(origin)
-    .destination(destination);
+NavigationRoute.Builder builder = NavigationRoute.builder()
+      .accessToken(Mapbox.getAccessToken())
+      .origin(origin)
+      .destination(destination);
 
     for (Point waypoint : waypoints) {
       builder.addWaypoint(waypoint);

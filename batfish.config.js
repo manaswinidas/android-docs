@@ -6,9 +6,11 @@ const rehypeSlug = require('rehype-slug');
 const rehypeHighlightCodeBlock = require('@mapbox/rehype-highlight-code-block');
 const mapboxHighlighter = require('@mapbox/mapbox-highlighter');
 const mapboxAssembly = require('@mapbox/mapbox-assembly');
+const addLinksToHeadings = require('./plugins/add-links-to-headings');
+const makeTableScroll = require('./plugins/make-table-scroll');
 
 const productPageOrder = {
-  'map-sdk/overview/': [
+  'maps/overview/': [
     'index',
     'styling-map',
     'annotations',
@@ -19,8 +21,8 @@ const productPageOrder = {
     'runtime-styling',
     'gestures'
   ],
-  'map-sdk/examples/': ['index'],
-  'map-sdk/tutorials/': ['index'],
+  'maps/examples/': ['index'],
+  'maps/tutorials/': ['index'],
   'plugins/overview/': [
     'index',
     'building',
@@ -48,8 +50,7 @@ const productPageOrder = {
     'directions-matrix',
     'geocoder',
     'optimization',
-    'static-image',
-    'turf'
+    'static-image'
   ],
   'java-sdk/examples/': ['index'],
   'core/overview/': ['index']
@@ -57,7 +58,7 @@ const productPageOrder = {
 
 module.exports = () => {
   const config = {
-    siteBasePath: 'android-docs',
+    siteBasePath: '/android-docs',
     siteOrigin: 'https://www.mapbox.com',
     browserslist: mapboxAssembly.browsersList,
     postcssPlugins: mapboxAssembly.postcssPipeline.plugins,
@@ -68,6 +69,9 @@ module.exports = () => {
       path.join(__dirname, './src/css/site.css')
     ],
     dataSelectors: {
+      platform: function() {
+        return 'Android';
+      },
       // Returns a dictionary for looking up ordered array of pages by product id
       // (slug).
       orderedPages: data => {
@@ -89,6 +93,22 @@ module.exports = () => {
           {}
         );
         return result;
+      },
+      listExamples: data => {
+        const examples = data.pages
+          .filter(page => {
+            return /\/examples\/+./.exec(page.path);
+          })
+          .map(example => {
+            return {
+              path: example.path,
+              title: example.frontMatter.title,
+              description: example.frontMatter.description,
+              topic: example.frontMatter.topic,
+              thumbnail: example.frontMatter.thumbnail
+            };
+          });
+        return examples;
       }
     },
     webpackLoaders: [
@@ -122,6 +142,8 @@ module.exports = () => {
       wrapper: path.join(__dirname, './src/components/markdown-page-shell.js'),
       rehypePlugins: [
         rehypeSlug,
+        addLinksToHeadings,
+        makeTableScroll,
         [rehypeHighlightCodeBlock, { highlight: mapboxHighlighter.highlight }]
       ]
     }

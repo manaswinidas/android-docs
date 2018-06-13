@@ -1,19 +1,13 @@
 ---
 title: "China"
 description: "Read official documentation on the Mapbox Android China Plugin which takes the Mapbox Map SDK for Android and configures it to maximize performance inside China."
-sideNavSections:
-  - title: "Install the China Plugin"
-  - title: "Shrink dependency size"
-  - title: "Using the correct objects"
-  - title: "China Map Styles"
-  - title: "Shifting annotations"
 prependJs:
   - |
     import {
       CHINA_PLUGIN_VERSION
     } from '../../../constants';
 ---
-# China
+
 Traditional map services are either blocked in China or suffer from slow internet connections. Our Mapbox.cn infrastructure allows for unparalleled speed advantages for anyone using our maps in China or through Chinese mobile carriers internationally. This plugin specifically bundles the Mapbox Maps SDK for Android and automatically configures it to ensure the correct endpoints are being called. Additionally, one of the dependencies allows for annotation shifting, which ensures all your overlays and annotations are accurately being depicted on the map.
 
 ## Install the China Plugin

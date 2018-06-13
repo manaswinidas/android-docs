@@ -6,8 +6,6 @@ sideNavSections:
   - title: "Downloading the image"
 ---
 
-# Static Image
-
 The Mapbox Static API returns static maps and raster tiles from styles in the Mapbox Style Specification. Static maps are standalone images that can be displayed in an `ImageView` without the aid of a mapping library or API. They look like an embedded map without interactivity or controls. Specific to the Java API, it builds the request URL for you.
 
 ## Building the URL
@@ -17,7 +15,7 @@ To begin with, you'll need to create a new instance of the `MapboxStaticMap` obj
 ```java
 MapboxStaticMap staticImage = MapboxStaticMap.builder()
   .accessToken(getString(R.string.access_token))
-  .styleId(StaticMapCriteria.DARK_STYLE)
+  .styleId(Style.LIGHT)
   .cameraPoint(Point.fromLngLat(lastLocation.getLongitude(),
   lastLocation.getLatitude())) // Image's centerpoint on map
   .cameraZoom(13)
@@ -26,8 +24,6 @@ MapboxStaticMap staticImage = MapboxStaticMap.builder()
   .retina(true) // Retina 2x image will be returned
   .build();
 ```
-
-Make sure to use the `StaticMapCriteria` to reference the default Mapbox map styles such as Light, Dark, or Streets. The `MapboxStaticMap` image generation will not work correctly if you try to use the `Style` class from the Mapbox Maps SDK for Android to retrieve the styles' strings.
 
 ### Downloading the image
 

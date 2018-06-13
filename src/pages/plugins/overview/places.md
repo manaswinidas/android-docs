@@ -1,19 +1,11 @@
 ---
 title: "Places"
 description: "Read docs on the Mapbox Places Plugin for Android. Easily search destinations, explore what's nearby, or find favorite restaurants, coffee shops, or stores."
-sideNavSections:
-  - title: "Install the Places plugin"
-  - title: "Add Autocomplete"
-  - title: "Customize Autocomplete results"
-  - title: "Clear search history"
-  - title: "Add Place Picker"
 prependJs:
   - |
     import { PLACES_PLUGIN_VERSION } from '../../../constants';
-    import { AppropriateImage } from '../../../components/appropriate-image';
+    import AppropriateImage from '../../../components/appropriate-image';
 ---
-
-# Places
 
 The **Places plugin for Android** lets users search for a destination, explore what's nearby, or find their favorite restaurants, coffee shops, or stores. The Places Plugin is built on top of our [Mapbox Geocoding API](https://www.mapbox.com/api-documentation/#geocoding) and offers UI components that can be integrated inside your app with a few lines of code.
 

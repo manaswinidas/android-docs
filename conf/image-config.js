@@ -21,232 +21,268 @@ module.exports = {
     basename: 'overview-core-lib.png',
     sizes: [{ width: 322 }]
   },
-  examplesGettingStartedSimpleMap: {
+  thumbnailGettingStartedSimpleMap: {
     basename: 'getting-started-simple-map.png',
     sizes: [{ width: 520 }]
   },
-  examplesGettingStartedSupportFragment: {
+  thumbnailGettingStartedSupportFragment: {
     basename: 'getting-started-support-fragment.png',
     sizes: [{ width: 520 }]
   },
-  examplesGettingStartedDynamicallyAddMap: {
+  thumbnailGettingStartedDynamicallyAddMap: {
     basename: 'getting-started-dynamically-add-map.png',
     sizes: [{ width: 520 }]
   },
-  examplesStyleMapStudioStyle: {
+  thumbnailStyleMapStudioStyle: {
     basename: 'style-map-studio-style.png',
     sizes: [{ width: 520 }]
   },
-  examplesStyleMapHotspotsRuntime: {
+  thumbnailStyleMapHotspotsRuntime: {
     basename: 'style-map-hotspots-runtime.gif',
     sizes: [{ width: 520 }]
   },
-  examplesStyleMapChangeMapLanguage: {
+  thumbnailStyleMapChangeMapLanguage: {
     basename: 'style-map-change-map-language.png',
     sizes: [{ width: 520 }]
   },
-  examplesStyleMapCustomRaster: {
+  thumbnailStyleMapCustomRaster: {
     basename: 'style-map-custom-raster.png',
     sizes: [{ width: 520 }]
   },
-  examplesStyleMapDefaultStyle: {
+  thumbnailStyleMapDefaultStyle: {
     basename: 'style-map-default-style.png',
     sizes: [{ width: 520 }]
   },
-  examplesStyleMapShowHideLayer: {
+  thumbnailStyleMapShowHideLayer: {
     basename: 'style-map-show-hide-layer.png',
     sizes: [{ width: 520 }]
   },
-  examplesStyleMapCustomColors: {
+  thumbnailStyleMapCustomColors: {
     basename: 'style-map-custom-colors.png',
     sizes: [{ width: 520 }]
   },
-  examplesStyleLineLayer: {
+  thumbnailStyleLineLayer: {
     basename: 'style-map-line-layer.png',
     sizes: [{ width: 520 }]
   },
-  examplesStyleMapLayerOpacity: {
+  thumbnailStyleMapLayerOpacity: {
     basename: 'style-map-layer-opacity.png',
     sizes: [{ width: 520 }]
   },
-  examplesStyleMapGeojsonLayer: {
+  thumbnailStyleMapGeojsonLayer: {
     basename: 'style-map-geojson-layer.png',
     sizes: [{ width: 520 }]
   },
-  examplesStyleMapVectoLayer: {
+  thumbnailStyleMapVectoLayer: {
     basename: 'style-map-vector-layer.png',
     sizes: [{ width: 520 }]
   },
-  examplesStyleMapWmsMap: {
+  thumbnailStyleMapWmsMap: {
     basename: 'style-map-wms-map.png',
     sizes: [{ width: 520 }]
   },
-  examplesStyleMapClustering: {
+  thumbnailStyleMapClustering: {
     basename: 'style-map-clustering.png',
     sizes: [{ width: 520 }]
   },
-  examplesStyleMapSymbolLayer: {
+  thumbnailStyleMapSymbolLayer: {
     basename: 'style-map-symbol-layer.png',
     sizes: [{ width: 520 }]
   },
-  examplesCameraAnimatedCamera: {
+  thumbnailCameraAnimatedCamera: {
     basename: 'camera-animated-camera.gif',
     sizes: [{ width: 520 }]
   },
-  examplesAnnotationsDrawMarker: {
+  thumbnailAnnotationsDrawMarker: {
     basename: 'annotations-draw-marker.png',
     sizes: [{ width: 520 }]
   },
-  examplesCameraCameraBbox: {
+  thumbnailCameraCameraBbox: {
     basename: 'camera-camera-bbox.gif',
     sizes: [{ width: 520 }]
   },
-  examplesCameraRestrictPanning: {
+  thumbnailCameraRestrictPanning: {
     basename: 'camera-restrict-panning.png',
     sizes: [{ width: 520 }]
   },
-  examplesAnnotationsCustomInfoWindow: {
+  thumbnailAnnotationsCustomInfoWindow: {
     basename: 'annotations-custom-info-window.png',
     sizes: [{ width: 520 }]
   },
-  examplesAnnotationsAnimatedMarker: {
+  thumbnailAnnotationsAnimatedMarker: {
     basename: 'annotations-animated-marker.gif',
     sizes: [{ width: 520 }]
   },
-  examplesAnnotationsCustomIcon: {
+  thumbnailAnnotationsCustomIcon: {
     basename: 'annotations-custom-icon.png',
     sizes: [{ width: 520 }]
   },
-  examplesAnnotationsPolyline: {
+  thumbnailAnnotationsPolyline: {
     basename: 'annotations-polyline.png',
     sizes: [{ width: 520 }]
   },
-  examplesAnnotationsPolygon: {
+  thumbnailAnnotationsPolygon: {
     basename: 'annotations-polygon.png',
     sizes: [{ width: 520 }]
   },
-  examplesAnnotationsPolygonWithHoles: {
+  thumbnailAnnotationsMarkerView: {
+    basename: 'annotations-marker-view.png',
+    sizes: [{ width: 520 }]
+  },
+  thumbnailAnnotationsPolygonWithHoles: {
     basename: 'annotations-polygon-with-holes.png',
     sizes: [{ width: 520 }]
   },
-  examples3dExtrusionsPopulationExtrusions: {
+  thumbnail3dExtrusionsPopulationExtrusions: {
     basename: '3d-extrusions-population_extrusions.gif',
     sizes: [{ width: 520 }]
   },
-  examples3dExtrusionsGeojsonExtrusions: {
+  thumbnail3dExtrusionsGeojsonExtrusions: {
     basename: '3d-extrusions-geojson_extrusions.gif',
     sizes: [{ width: 520 }]
   },
-  examples3dExtrusionsExtrusionLight: {
+  thumbnail3dExtrusionsExtrusionLight: {
     basename: '3d-extrusions-extrusion_light.gif',
     sizes: [{ width: 520 }]
   },
-  examples3dExtrusionsIndoorMapping: {
+  thumbnail3dExtrusionsIndoorMapping: {
     basename: '3d-extrusions-indoor-mapping-extrusions.png',
     sizes: [{ width: 520 }]
   },
-  examples3dExtrusionsDeviceFeedback: {
+  thumbnail3dExtrusionsDeviceFeedback: {
     basename: '3d-extrusions-device-rotation.png',
     sizes: [{ width: 520 }]
   },
-  examplesDdsCategoricallyDds: {
+  thumbnailDdsCategoricallyDds: {
     basename: 'dds-categorically-dds.gif',
     sizes: [{ width: 520 }]
   },
-  examplesDdsPopulationZoom: {
+  thumbnailDdsPopulationZoom: {
     basename: 'dds-population-zoom.gif',
     sizes: [{ width: 520 }]
   },
-  examplesDdsColorZoom: {
+  thumbnailDdsColorZoom: {
     basename: 'dds-color-zoom.gif',
     sizes: [{ width: 520 }]
   },
-  examplesDdsLinePropertyStyling: {
+  thumbnailDdsLinePropertyStyling: {
     basename: 'dds-line-style-identity.png',
     sizes: [{ width: 520 }]
   },
-  examplesDdsJSONVectorMerge: {
+  thumbnailDdsJSONVectorMerge: {
     basename: 'dds-json-vector-merge.png',
     sizes: [{ width: 520 }]
   },
-  examplesDdsDataTimeLapse: {
+  thumbnailDdsDataTimeLapse: {
     basename: 'dds-data-time-lapse.png',
     sizes: [{ width: 520 }]
   },
-  examplesOfflineSimpleOffline: {
+  thumbnailOfflineSimpleOffline: {
     basename: 'offline-simple-offline.png',
     sizes: [{ width: 520 }]
   },
-  examplesOfflineOfflineManager: {
+  thumbnailOfflineOfflineManager: {
     basename: 'offline-offline-manager.png',
     sizes: [{ width: 520 }]
   },
-  examplesQuerySelectBuilding: {
+  thumbnailQuerySelectBuilding: {
     basename: 'query-select-building.gif',
     sizes: [{ width: 520 }]
   },
-  examplesQueryFeatureCount: {
+  thumbnailQueryFeatureCount: {
     basename: 'query-feature-count.gif',
     sizes: [{ width: 520 }]
   },
-  examplesQueryQueryMap: {
+  thumbnailQueryQueryMap: {
     basename: 'query-query-map.png',
     sizes: [{ width: 520 }]
   },
-  examplesQuerySingleLayerClick: {
+  thumbnailQuerySingleLayerClick: {
     basename: 'query-single-layer-click.png',
     sizes: [{ width: 520 }]
   },
-  examplesTrafficPlugin: {
+  thumbnailTrafficPlugin: {
     basename: 'plugins-traffic-plugin.png',
     sizes: [{ width: 520 }]
   },
-  examplesLocationLayer: {
+  thumbnailLocationLayer: {
     basename: 'plugins-location-layer.png',
     sizes: [{ width: 520 }]
   },
-  examplesGeoJson: {
+  thumbnailGeoJson: {
     basename: 'plugins-geojson.png',
     sizes: [{ width: 520 }]
   },
-  examplesLocalization: {
+  thumbnailLocalization: {
     basename: 'plugins-localization.png',
     sizes: [{ width: 520 }]
   },
-  examplesPlaces: {
+  thumbnailMarkerClusters: {
+    basename: 'plugins-marker-cluster.png',
+    sizes: [{ width: 520 }]
+  },
+  thumbnailPlaces: {
     basename: 'plugins-places.png',
     sizes: [{ width: 520 }]
   },
-  examplesBuilding: {
+  thumbnailBuilding: {
     basename: 'plugins-building.png',
     sizes: [{ width: 520 }]
   },
-  examplesDirection: {
+  thumbnailDirection: {
     basename: 'mapbox-java-direction.png',
     sizes: [{ width: 520 }]
   },
-  examplesMapMatching: {
+  thumbnailMapMatching: {
     basename: 'mapbox-java-map-matching.png',
     sizes: [{ width: 520 }]
   },
-  examplesMatrix: {
+  thumbnailMatrix: {
     basename: 'mapbox-java-matrix.png',
     sizes: [{ width: 520 }]
   },
-  examplesSimplifyLine: {
+  thumbnailSimplifyLine: {
     basename: 'mapbox-java-simplify-line.gif',
     sizes: [{ width: 520 }]
   },
-  examplesGeocodingAutoComplete: {
+  thumbnailGeocodingAutoComplete: {
     basename: 'mapbox-java-geocoding-auto-complete.gif',
     sizes: [{ width: 520 }]
   },
-  examplesStaticImage: {
+  thumbnailStaticImage: {
     basename: 'mapbox-java-static-image.gif',
     sizes: [{ width: 520 }]
   },
-  examplesOptimization: {
+  thumbnailOptimization: {
     basename: 'mapbox-services-optimization.png',
+    sizes: [{ width: 520 }]
+  },
+  thumbnailEmbeddedNavigation: {
+    basename: 'embedded-navigation-thumbnail.png',
+    sizes: [{ width: 520 }]
+  },
+  thumbnailMockNavigation: {
+    basename: 'mock-navigation-thumbnail.png',
+    sizes: [{ width: 520 }]
+  },
+  thumbnailNavigationMapRoute: {
+    basename: 'navigation-map-route-thumbnail.png',
+    sizes: [{ width: 520 }]
+  },
+  thumbnailNavigationView: {
+    basename: 'navigation-view-thumbnail.png',
+    sizes: [{ width: 520 }]
+  },
+  thumbnailNavigationViewWithFragment: {
+    basename: 'navigationview-with-fragment-thumbnail.png',
+    sizes: [{ width: 520 }]
+  },
+  thumbnailReroute: {
+    basename: 'reroute-thumbnail.png',
+    sizes: [{ width: 520 }]
+  },
+  thumbnailWaypointNavigation: {
+    basename: 'waypoint-navigation-thumbnail.png',
     sizes: [{ width: 520 }]
   },
   tutorialsFirstStepsIntro: {
@@ -292,5 +328,105 @@ module.exports = {
   locationLayerGpsGif: {
     basename: 'location-layer-gps.gif',
     sizes: [{ width: 500 }]
+  },
+  // --------------------------------------------------
+  // Example images in device frames
+  // --------------------------------------------------
+  //
+  // JAVA SDK
+  //
+  exampleDirections: {
+    basename: 'example-directions.png',
+    sizes: [{ width: 1400 }]
+  },
+  exampleMapMatching: {
+    basename: 'example-map-matching.png',
+    sizes: [{ width: 1400 }]
+  },
+  exampleSimplifyPolyline: {
+    basename: 'example-simplify-polyline.png',
+    sizes: [{ width: 1400 }]
+  },
+  //
+  // MAPS SDK
+  //
+  exampleIndoor3DMap: {
+    basename: 'example-indoor-3d-map.png',
+    sizes: [{ width: 1400 }]
+  },
+  examplePopulationDensityExtrusion: {
+    basename: 'example-population-density-extrusion.png',
+    sizes: [{ width: 1400 }]
+  },
+  examplePolygonHoles: {
+    basename: 'example-polygon-holes.png',
+    sizes: [{ width: 1400 }]
+  },
+  exampleDrawPolygon: {
+    basename: 'example-draw-polygon.png',
+    sizes: [{ width: 1400 }]
+  },
+  exampleDrawGeojsonLine: {
+    basename: 'example-draw-geojson-line.png',
+    sizes: [{ width: 1400 }]
+  },
+  exampleMultipleGeometries: {
+    basename: 'example-multiple-geometries.png',
+    sizes: [{ width: 1400 }]
+  },
+  exampleStyleLineIdentityProperty: {
+    basename: 'example-style-line-identity-property.png',
+    sizes: [{ width: 1400 }]
+  },
+  exampleHillShade: {
+    basename: 'example-hill-shade.png',
+    sizes: [{ width: 1400 }]
+  },
+  exampleImageSource: {
+    basename: 'example-image-source.png',
+    sizes: [{ width: 1400 }]
+  },
+  exampleMapboxStudioStyle: {
+    basename: 'example-mapbox-studio-style.png',
+    sizes: [{ width: 1400 }]
+  },
+  exampleGeojsonLayerInStack: {
+    basename: 'example-geojson-layer-in-stack.png',
+    sizes: [{ width: 1400 }]
+  },
+  exampleAddWmsSource: {
+    basename: 'example-add-wms-source.png',
+    sizes: [{ width: 1400 }]
+  },
+  exampleVectorSource: {
+    basename: 'example-vector-source.png',
+    sizes: [{ width: 1400 }]
+  },
+  exampleLineLayer: {
+    basename: 'example-line-layer.png',
+    sizes: [{ width: 1400 }]
+  },
+  exampleMapboxMapOption: {
+    basename: 'example-mapbox-map-option.png',
+    sizes: [{ width: 1400 }]
+  },
+  exampleSupportMapFragment: {
+    basename: 'example-support-map-fragment.png',
+    sizes: [{ width: 1400 }]
+  },
+  exampleSimpleMapView: {
+    basename: 'example-simple-map-view.png',
+    sizes: [{ width: 1400 }]
+  },
+  //
+  // PLUGINS
+  //
+  exampleBuildingPlugin: {
+    basename: 'example-building-plugin.png',
+    sizes: [{ width: 1400 }]
+  },
+  exampleTrafficPlugin: {
+    basename: 'example-traffic-plugin.png',
+    sizes: [{ width: 1400 }]
   }
 };

@@ -1,23 +1,9 @@
 ---
 title: "Navigation turn-by-turn UI"
 description: "Customize the design of your Android app's turn-by-turn navigation experience. How? The Mapbox Navigation SDK for Android. Click for docs and info."
-sideNavSections:
-  - title: "Install the Navigation UI SDK"
-  - title: "Launch the Navigation UI"
-  - title: "NavigationViewOptions"
-  - title: "Localization of NavigationView"
-  - title: "NavigationView Activity Example"
-  - title: "NavigationView Fragment Example"
-  - title: "Listening to the NavigationView"
-  - title: "Styling the NavigationView"
-  - title: "InstructionView"
-  - title: "NavigationMapRoute"
-  - title: "NavigationCamera"
 prependJs:
   - "import { NAVIGATION_VERSION } from '../../../constants';"
 ---
-
-# Navigation turn-by-turn UI
 
 Mapbox Navigation gives you all of the tools that you need to add turn-by-turn navigation to your apps.
 
@@ -33,20 +19,34 @@ repositories {
 }
 
 dependencies {
-  implementation 'com.mapbox.mapboxsdk:mapbox-android-navigation-ui:{{ NAVIGATION_VERSION }}'
+  compile ('com.mapbox.mapboxsdk:mapbox-android-navigation-ui:{{ NAVIGATION_VERSION }}') {
+    transitive = true
+  }
+}
+```
+#### Gradle 3.0
+```groovy
+dependencies {
+  implementation ('com.mapbox.mapboxsdk:mapbox-android-navigation-ui:{{ NAVIGATION_VERSION }}') {
+    transitive = true
+  }
 }
 ```
 
 ## Launch the Navigation UI
 
-With a `DirectionsRoute` from `NavigationRoute`, you can launch the UI with `NavigationLauncher` from within your `Activity`:
+With either a `DirectionsRoute` from `NavigationRoute` or two `Point` objects (origin and destination), you can launch the UI with `NavigationLauncher` from within your `Activity`:
 
 ```java
+Point origin = Point.fromLngLat(-77.03613, 38.90992);
+Point destination = Point.fromLngLat(-77.0365, 38.8977);
+
 boolean simulateRoute = true;
 
 // Create a NavigationLauncherOptions object to package everything together
 NavigationLauncherOptions options = NavigationLauncherOptions.builder()
-  .directionsRoute(route) // Fetched from NavigationRoute
+  .origin(origin)
+  .destination(destination)
   .shouldSimulateRoute(simulateRoute)
   .build();
 
@@ -57,35 +57,34 @@ NavigationLauncher.startNavigation(this, options);
 ## NavigationViewOptions
 
 `NavigationViewOptions` provides a way to pass variables to a `NavigationView`.
-This class can only be used with a custom `NavigationView` implementation and not
-with the `NavigationLauncher`.
+This class can be used with `NavigationLauncher` or when starting navigation
+with a custom implementation of `NavigationView`.
 
-You must provide a valid `DirectionsRoute` object, like with `NavigationLauncherOptions`:
+You must provide either a valid `DirectionsRoute` object, or both an origin
+and destination `Point` objects.
+If you provide both, only the `DirectionsRoute` will be used.
+
 ```java
 NavigationViewOptions options = NavigationViewOptions.builder()
   .directionsRoute(DirectionsRoute route)
   .shouldSimulateRoute(boolean simulateRoute)
   .build();
-
-navigationView.startNavigation(options);
 ```
 
-## Localization of NavigationView
-Voice announcement pronunciation as well as distance unit formatting (imperial vs. metric) are
-determined by the `DirectionsRoute` provided to the `NavigationLauncher` or `NavigationView`.
-  - `language` and `voiceUnits` type are used to determine pronunciation for voice announcements and parsing of distances respectively.  
-  - An example request demonstrating how to configure:
-  ``` java
-    NavigationRoute.builder(this)
-      .accessToken(Mapbox.getAccessToken())
-      .origin(origin)
-      .destination(destination)
-      .language(Locale.FRANCE.getLanguage())
-      .voiceUnits(DirectionsCriteria.METRIC)
-      .build().getRoute(this);
-  ```
-  - Once this route is successfully retrieved by our Directions API and passed to the SDK, we will look at the French `Locale` and `METRIC` voice units for our localization.
-  - The `NavigationRoute.builder(this)` now takes in a `Context` so we can provide device  defaults based on the current device configuration if a `language` or `voiceUnits` is not set otherwise.   
+#### Unit Type (Metric / Imperial)
+You can also provide a `MapboxNavigationOptions` object with the same customization you would
+provide when passing this object to `MapboxNavigation`.  We have added a `unitType` to the builder that will allow
+you to customize how the turn-by-turn-UI parses the distance data (on the UI and in the voice announcements).
+
+```java
+MapboxNavigationOptions navigationOptions = MapboxNavigationOptions.builder()
+  .unitType(NavigationUnitType.TYPE_METRIC)
+  .build();
+
+NavigationViewOptions viewOptions = NavigationViewOptions.builder()
+  .navigationOptions(navigationOptions)
+  .build();
+```
 
 ## NavigationView Activity Example
 
@@ -180,6 +179,7 @@ public void onNavigationReady() {
   NavigationViewOptions options = NavigationViewOptions.builder()
     .origin(origin)
     .destination(destination)
+    .awsPoolId(awsPoolId)
     .shouldSimulateRoute(simulateRoute)
     .build();
 
@@ -313,7 +313,6 @@ core SDK are able to be added, as well as three others: `NavigationListener`, `R
    - This is the new route the user will be following until another off route event is triggered.
 - `onFailedReroute(String errorMessage)`: Will trigger if the request for a new `DirectionsRoute` fails.
    - Provides the error message from the directions API used to retrieve the `DirectionsRoute`.
-- `onArrival()`: Will trigger when the user has arrived at `DirectionsRoute` waypoint.
 
 #### `FeedbackListener`
 - `onFeedbackOpened()`: Will be triggered when the feedback bottomsheet is opened by a user while navigating.

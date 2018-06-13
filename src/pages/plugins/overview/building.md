@@ -1,17 +1,13 @@
 ---
 title: "Building"
 description: "Read official documentation on the Mapbox Android Building Plugin and how its several lines of code can help you add 3D buildings to your Android app's map. "
-sideNavSections:
-  - title: "install the Building Plugin"
-  - title: "Add the Building Plugin"
-  - title: "Customization"
 prependJs:
   - |
     import {
       BUILDING_PLUGIN_VERSION
     } from '../../../constants';
 ---
-# Building
+
 Support for extrusions was added with `5.1.0` of the Map SDK, unlocking the possibility to display **3D buildings** on your favorite map style. The building plugin extends this functionality and makes it even easier to add buildings to a map style.
 
 ## Install the Building Plugin

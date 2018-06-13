@@ -1,4 +1,4 @@
 import { prefixUrl } from '@mapbox/batfish/modules/prefix-url';
 import { createRedirect } from '../components/create-redirect';
 
-export default createRedirect(prefixUrl('/map-sdk/overview/'));
+export default createRedirect(prefixUrl('/maps/overview/'));

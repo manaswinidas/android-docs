@@ -1,5 +1,5 @@
 ---
-title: "Core"
+title: "Introduction"
 description: "Overview of the Mapbox Core Libraries for Android. Easily handle telemetry, device location, and connectivity for any app."
 sideNavSections:
   - title: "Installation"

@@ -1,5 +1,5 @@
 ---
-title: "Mapbox Java SDK"
+title: "Introduction"
 description: "Official documentation on the Mapbox Java SDK"
 sideNavSections:
   - title: "Support and contributions"
@@ -15,13 +15,14 @@ overviewHeaderProps:
   sdk: Mapbox Java SDK
   changelogLink: "https://github.com/mapbox/mapbox-java/blob/master/CHANGELOG.md"
   ghLink: "https://github.com/mapbox/mapbox-java"
+  installLink: "https://github.com/mapbox/mapbox-java"
+  versionConstant: JAVA_SDK_VERSION
   sdkFeatures:
     - Directions
     - Geocoding
     - Map Matching
     - Directions Matrix
     - Optimization
-    - Turf
   newFeature:
     - false
     - false

@@ -7,7 +7,6 @@ sideNavSections:
   - title: "Reverse geocoding"
   - title: "Batch geocoding"
 ---
-# Geocoder
 
 The Mapbox Geocoding API does two things: forward geocoding and reverse geocoding. **Forward geocoding** lets you convert location text into geographic coordinates, and **reverse geocoding** turns geographic coordinates into place names.
 

@@ -1,24 +1,14 @@
 ---
 title: "Location"
 description: "Offical documentation about the Mapbox Android Location Layer Plugin. Show the Android device's location on a Mapbox Map in just a few quick steps."
-sideNavSections:
-  - title: "Install the Location Layer Plugin"
-  - title: "Setup permissions"
-  - title: "Lifecycles"
-  - title: "Enabling or disabling the LocationLayerPlugin"
-  - title: "Showing the user location with RenderMode"
-  - title: "Following the user location with CameraMode"
-  - title: "Usage with navigation"
-  - title: "Gesture thresholds to dismiss camera tracking"
-  - title: "Customization"
 prependJs:
   - |
     import {
       LOCATION_LAYER_PLUGIN_VERSION
     } from '../../../constants';
-    import { AppropriateImage } from '../../../components/appropriate-image';
+    import AppropriateImage from '../../../components/appropriate-image';
 ---
-# Location Layer
+
 A popular, often critical feature is showing the users current location as an annotation to give a reference point on the map. This plugin makes use of the latest [runtime styling](/android-docs/map-sdk/overview/runtime-styling/) features to display the location icons/markers within the map itself rather than on top as an Android view. This brings several fixes and performance improvements previously experienced when using the now deprecated `MyLocationView`.
 
 ## Install the Location Layer Plugin

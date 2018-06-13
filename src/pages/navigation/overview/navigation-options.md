@@ -1,13 +1,7 @@
 ---
 title: "Navigation Options"
 description: "Mapbox documentation about navigation options within the Mapbox Navigation SDK for Android. Custom notifications, off-route thresholds, and even more."
-sideNavSections:
-  - title: Adjusting step completion thresholds
-  - title: Off-route threshold
-  - title: Creating a custom notification
-  - title: Adjusting location validation thresholds
 ---
-# Navigation Options
 
 The Navigation SDK for Android has default constants used during navigation, such as the duration or distance an event must occur. However, you might find yourself wanting to adjust these values to your liking in some situations. The `MapboxNavigtionOptions` object allows for tweaking all of the default values for maneuver zone thresholds, tolerance for offline, etc. The `MapboxNavigation` object constructor optionally takes in an instance of the `MapboxNavigtionOptions` object and uses the values set inside of the options class until `MapboxNavigation`'s destroyed.
 

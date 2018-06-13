@@ -1,17 +1,13 @@
 ---
 title: "Traffic"
 description: "Discover how to display real-time road traffic on your Android map with the Mapbox Android Traffic Plugin. All it requires is two lines of code."
-sideNavSections:
-  - title: "Install the Traffic Plugin"
-  - title: "Add traffic"
-  - title: "Traffic colors"
 prependJs:
   - |
     import {
       TRAFFIC_PLUGIN_VERSION
     } from '../../../constants';
 ---
-# Traffic
+
 The Mapbox Traffic Plugin adds a real-time traffic layer to any Mapbox base map. If you want to display a traffic layer inside your application, you only need to include the dependency in your project and initialize the plugin. Various shades of colors indicate the congestion level for any given part of a road segment. If not enough traffic data available for a given road, no road information will be shown.
 
 Similar to other plugins, a third optional parameter in the traffic plugin's constructor which is useful for specifying the layer in which you want the traffic to display below. If the layer ID's missing in the third parameter, the plugin will attempt to place the traffic below all symbol layers so that text and icons on the map are still visible on top of the traffic lines. It is always a good idea to pass in a string ID rather than relying on the Plugin to attempt to place the traffic below a symbol layer since it isn't guaranteed to work properly.

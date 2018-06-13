@@ -1,13 +1,7 @@
 ---
 title: "Milestones"
 description: "Trusted documentation about milestones within the Mapbox Navigation SDK for Android. Know when to instruct your users and/or when to hide or show custom UI."
-sideNavSections:
-  - title: "Default Milestones"
-  - title: "Milestone event listener"
-  - title: "Building a custom milestone"
-  - title: "Custom instructions"
 ---
-# Milestones
 
 Navigation milestones inside the SDK provide a powerful way to give your user instructions or get cues to hide or show
 custom UI at defined locations along their route.  You can create custom milestones that fit your particular app needs.
@@ -50,11 +44,6 @@ navigation.addMilestone(new RouteMilestone.Builder()
       Trigger.gt(TriggerProperty.STEP_DISTANCE_TOTAL_METERS, 200)
     )
   ).build());
-
-// Adding a list of Milestones
-List<Milestone> milestones = new ArrayList<>();
-...
-navigation.addMilestones(milestones);
 ```
 
 ### Trigger conditions

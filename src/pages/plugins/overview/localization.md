@@ -1,13 +1,6 @@
 ---
 title: "Localization"
 description: "Mapbox Android Localization Plugin"
-sideNavSections:
-  - title: "Install the Localization Plugin"
-  - title: "Initialize the plugin"
-  - title: "Use MapLocale"
-  - title: "Match map with device language"
-  - title: "Set map language"
-  - title: "Adjust the map camera"
 prependJs:
   - |
     import {
@@ -15,8 +8,6 @@ prependJs:
     } from '../../../constants';
 
 ---
-
-# Localization
 
 The Mapbox Localization Plugin is an excellent option for adjusting your Android project's map experience according to the individual user's preferences. The plugin:
 

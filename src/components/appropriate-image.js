@@ -1,12 +1,11 @@
-const appropriateImagesReact = require('@mapbox/appropriate-images-react');
+import { scopeAppropriateImage } from '@mapbox/appropriate-images-react';
 import imageConfig from '../../conf/image-config.js';
 
 // See https://github.com/mapbox/appropriate-images-react#appropriateimage
-const AppropriateImage = appropriateImagesReact.scopeAppropriateImage(
-  imageConfig,
-  {
-    transformUrl: url => require(`../img/dist/${url}`)
-  }
-);
+// The required prop is `imageId`, which must correspond to a key in the
+// imageConfig.
+const AppropriateImage = scopeAppropriateImage(imageConfig, {
+  transformUrl: url => require(`../img/dist/${url}`)
+});
 
-export { AppropriateImage };
+export default AppropriateImage;

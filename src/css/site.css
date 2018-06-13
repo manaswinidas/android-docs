@@ -1,75 +1,5 @@
-@custom-media --s-screen (min-width: 440px);
-
-/* MAKE THESE CHANGES IN MAPBOX-HIGHLIGHTER THEME */
-
-.prose pre:not(.unprose) {
-  background-color: #273d56 !important;
-  border-radius: 3px;
-  padding: 12px !important;
-  white-space: pre-wrap;
-}
-
-.editor {
-  background-color: none;
-  padding: 0;
-  border-radius: 0;
-}
-
-/* MAPBOX-ASSEMBLY */
-
-@keyframes progress-cycle {
-  0% {
-    background: #163cde;
-  }
-  100% {
-    background: #3b2093;
-  }
-}
-
-.page-loader {
-  /* Keep the rounded corners offscreen */
-  transform: translate3d(-100%, 0, 0);
-  transition: all 150ms ease-in;
-  animation: progress-cycle 0.75s ease-in-out alternate-reverse infinite;
-  width: 200%;
-}
-
-.prose a:not(.btn) {
-  cursor: pointer;
-  color: #4264fb;
-  transition: color .125s;
-  text-decoration: none;
-}
-
-.prose a:hover {
-  opacity: 0.7;
-}
-
-.prose h3 {
-  font-size: 22px !important;
-}
-
-.page-loader-enter {
-  transform: translate3d(-10%, 0, 0);
-  transition: all 150ms ease-in;
-}
-
-.page-loader-leave {
-  transform: translate3d(100%, 0, 0);
-  transition: all 150ms ease-in;
-}
-
-/* ------------- Assembly Extensions ------------ */
-
-.border--gray-less-faint {
-  border-color: #e8ebee !important;
-}
-
-.text-decoration-none {
-  text-decoration: none !important;
-}
-.unstyled-list li {
-  list-style-type: none !important;
+.sticky-outer-wrapper.z1 > .sticky-inner-wrapper {
+  z-index: 1 !important;
 }
 
 .txt-ms {
@@ -77,75 +7,69 @@
   line-height: 18px;
 }
 
-td,
-th {
-  text-align: left !important;
-  padding: 4px !important;
-  font-size: 12px !important;
+#docs-content.prose h1 {
+  margin-top: 6px;
+  margin-bottom: 30px;
+  font-size: 36px;
 }
 
-th {
-  background-color: #e8ebee;
-}
-
-td,
-code {
+#docs-content.prose h2 {
   font-weight: normal !important;
-  font-size: 12px !important;
-}
-.prose pre:not(.unprose) {
-  padding: 0;
-  background: transparent;
-}
-
-@media (max-width: 1200px) {
-  .pr24-until-mxl {
-    padding-right: 24px !important;
-  }
+  cursor: pointer;
+  font-size: 30px;
+  border-top: 1px solid !important;
+  border-color: #d6dee8 !important;
+  padding-top: 60px;
+  margin: 36px 0px 18px;
 }
 
-/* ------------ Content adjustments ------------- */
-
-.prose h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: normal !important;
+#docs-content.prose h3 {
+  font-weight: normal;
+  cursor: pointer;
+  font-size: 24px;
+  padding-top: 40px;
 }
 
-/* ------------- Markdown styles ---------------- */
-
-.doc-ul > .doc-ul-item::before {
-  content: '';
-  width: 8px;
-  height: 8px;
-  border-radius: 2px;
-  border: 1px solid #1f3349;
-  opacity: 0.4;
-  position: absolute;
-  margin: 9px 0 0 -20px;
+#docs-content.prose th {
+  text-align: center;
+  background-color: #f4f7fb;
 }
 
-.doc-ol {
-  counter-reset: listItem;
+#docs-content.prose td {
+  text-align: center;
 }
 
-.doc-ol > .doc-ol-item {
-  margin: 3px 0;
+.wmax900 {
+  max-width: 900px !important;
 }
 
-ol li {
-  list-style-type: none;
+.h480 {
+  height: 480px !important;
 }
 
-ol li::before {
-  counter-increment: listItem;
-  content: counter(listItem);
+.w480 {
+  width: 480px !important;
+}
+
+.wmax480 {
+  max-width: 480px !important;
+}
+
+.iphone-horizontal-padding {
+  padding-top: 2.25%;
+  padding-right: 1%;
+  padding-left: 1%;
+}
+
+.unprose pre {
+  display: block;
+  font-family: 'Menlo', 'Bitstream Vera Sans Mono', 'Monaco', 'Consolas',
+    monospace;
   font-size: 12px;
+  line-height: 1.5em;
+  overflow-x: auto;
+  background: #273d56 !important;
+  color: #fff;
+  padding: 12px;
   border-radius: 3px;
-  padding: 1px 6px;
-  border: 1px solid #c6d2e1;
-  margin-right: 12px;
 }

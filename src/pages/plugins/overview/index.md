@@ -1,5 +1,5 @@
 ---
-title: "Mapbox Plugins"
+title: "Introduction"
 description: "Overview of Mapbox Android plugins"
 sideNavSections:
   - title: "What are Mapbox Plugins"
@@ -13,9 +13,9 @@ overviewHeaderProps:
   ghLink: "https://github.com/mapbox/mapbox-plugins-android"
   sdkFeatures:
     - Add in-app place searching
+    - Load GeoJSON files onto the map
     - Show user location
-    - Display traffic
-    - Reveal 3D building shapes
+    - Display traffic and 3D buildings
     - Change the map's language
     - Offline mapping
   newFeature:
@@ -54,6 +54,7 @@ The plugins we offer are extensive and cover many of our SDKs for Android. They 
 - **Traffic**: Place realtime traffic data within your map style as a layer.
 - **Places**: Add UI components such as a Place Picker or Autocomplete search built on top of the [Mapbox Geocoding API](https://www.mapbox.com/api-documentation/#geocoding). Each component includes an intentBuilder which starts an activity for results and returns a Carmen Feature.
 - **Offline**: Download map tiles and easily view already-downloaded regions for offline mapping.
+- **Marker cluster**: Add map marker clusters to show large sets of data with a clean UI experience.
 - **Localization**: Change the map's language based on the device's default language settings or other runtime variables.
 
 

@@ -1,11 +1,7 @@
 ---
 title: "Map Matching with Navigation"
 description: "Using Map Matching with the Navigation SDK"
-sideNavSections:
-  - title: "Map Matching with MapboxNavigation"
-  - title: "Map Matching with NavigationView"
 ---
-# Using Map Matching with the Navigation SDK
 
 In some cases, you may want to have the user stick to a very specific route that doesn't fit into the scope covered by the Mapbox Directions API. For example, a company would like to use its own custom truck routing API, but also allow people to navigate on it with the Mapbox Navigation SDK for Android. The Mapbox Map Matching API is an appropriate fit for this situation.
 

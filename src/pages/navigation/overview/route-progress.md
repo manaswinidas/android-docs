@@ -1,12 +1,7 @@
 ---
 title: "Route Progress Object"
 description: "Read these docs and learn how to use a user's progress information along a route with the Mapbox Navigation SDK for Android."
-sideNavSections:
-  - title: "On progress change"
-  - title: "RouteProgress Object"
 ---
-
-# Route Progress Object
 
 The `RouteProgress` class contains all the user's progress information along the route, including leg and steps. This object's provided inside `ProgressChangeListener`, allowing you to get distance measurements, the percentage of route complete, current step index, and much more.
 

@@ -1,128 +1,152 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import find from 'array-find';
-import classnames from 'classnames';
-import ReactPageShell from '../../vendor/dotcom-page-shell/react-page-shell';
-import orderedPages from '@mapbox/batfish/data/ordered-pages';
 import { withLocation } from '@mapbox/batfish/modules/with-location';
-import {
-  addRouteChangeStartListener,
-  addRouteChangeEndListener
-} from '@mapbox/batfish/modules/route-change-listeners';
-import pageLoadingIndicator from '@mapbox/page-loading-indicator';
-import { OverviewHeader } from './overview-header';
-import { TopNavigation } from './top-navigation';
-import { SideNavigation } from './side-navigation';
-import { productNavbarTabs } from '../data/product-navbar-tabs';
-import { productNames } from '../data/product-names';
+import ReactPageShell from '../../vendor/dotcom-page-shell/react-page-shell.js';
+import platform from '@mapbox/batfish/data/platform';
+import { StickyTopNav } from './sticky-top-nav';
+import { PageLayout } from './page-layout';
+import { ProductMenu } from './product-menu';
+import { TopNavTabs } from './top-nav-tabs';
+import listExamples from '@mapbox/batfish/data/list-examples';
+import orderedPages from '@mapbox/batfish/data/ordered-pages';
+// import survey from '@mapbox/react-simple-surveyor';
+import { MAP_SDK_VERSION, NAVIGATION_VERSION } from '../constants';
 
-addRouteChangeStartListener(onRouteChangeStart);
-addRouteChangeEndListener(onRouteChangeEnd);
-
-function onRouteChangeStart() {
-  pageLoadingIndicator.start();
-}
-function onRouteChangeEnd() {
-  pageLoadingIndicator.end();
-}
-
-class PageShell extends React.PureComponent {
-  static PropTypes = {
+class PageShell extends React.Component {
+  static propTypes = {
     frontMatter: PropTypes.shape({
       title: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
-      sideNavSections: PropTypes.arrayOf(
-        PropTypes.shape({
-          title: PropTypes.string.isRequired
-        })
-      ),
-      overviewHeaderProps: PropTypes.object
+      product: PropTypes.string
     }).isRequired,
-    proseContent: PropTypes.bool,
+    children: PropTypes.node.isRequired,
     // From withLocation
     location: PropTypes.shape({
       pathname: PropTypes.string.isRequired
     }).isRequired,
-    sideNavigation: PropTypes.node
-  };
-
-  static defaultProps = {
-    proseContent: false
+    headings: PropTypes.arrayOf(
+      PropTypes.shape({
+        level: PropTypes.number.isRequired,
+        slug: PropTypes.string.isRequired,
+        text: PropTypes.string.isRequired
+      })
+    )
   };
 
   render() {
-    const { props } = this;
+    const { frontMatter, location, children } = this.props;
+    const meta = this.props.meta || {};
+    if (!meta.title && frontMatter.title) {
+      meta.title = frontMatter.title;
+    }
+    if (!meta.description && frontMatter.description) {
+      meta.description = frontMatter.description;
+    }
+    if (!meta.pathname) {
+      meta.pathname = location.pathname;
+    }
 
-    let overviewHeader = null;
-    if (props.frontMatter.overviewHeaderProps) {
-      overviewHeader = (
-        <div className="mb36">
-          <OverviewHeader {...props.frontMatter.overviewHeaderProps} />
-        </div>
+    const normalizedPathname = /\/$/.test(this.props.location.pathname)
+      ? this.props.location.pathname
+      : `${this.props.location.pathname}/`;
+    const baseUrl = location.pathname.split('/')[1];
+    const checkBaseUrl = new RegExp(`/${baseUrl}/([^/]+/)([^/]+/)`);
+    const pathPrefixMatch = checkBaseUrl.exec(normalizedPathname);
+    if (!pathPrefixMatch) {
+      throw new Error(`No subnav known for ${this.props.location.pathname}`);
+    }
+
+    const product = location.pathname.split('/')[2];
+    const productProper = product.charAt(0).toUpperCase() + product.slice(1);
+
+    let sidebarContent = {};
+
+    if (location.pathname.indexOf('help') > -1) {
+      sidebarContent = {
+        firstLevelToc: null,
+        secondLevelToc: listExamples
+      };
+    } else if (location.pathname.indexOf('examples') > -1) {
+      sidebarContent = {
+        firstLevelToc: null,
+        secondLevelToc: listExamples
+      };
+    } else {
+      sidebarContent = {
+        firstLevelToc: orderedPages[pathPrefixMatch[1] + pathPrefixMatch[2]],
+        secondLevelToc: this.props.headings.filter(heading => {
+          return heading.level === 2;
+        })
+      };
+    }
+    let title = null;
+    if (meta.title !== 'Introduction') {
+      title = (
+        <h1 className="pt0 mt0 mb12 prose txt-fancy txt-xl">{meta.title}</h1>
       );
     }
 
-    const normalizedPathname = /\/$/.test(props.location.pathname)
-      ? props.location.pathname
-      : `${props.location.pathname}/`;
-    const pathPrefixMatch = /\/android-docs\/([^/]+\/)([^/]+\/)/.exec(
-      normalizedPathname
-    );
-    if (!pathPrefixMatch) {
-      throw new Error(`No subnav known for ${normalizedPathname}`);
+    const folder = location.pathname.split('/')[2];
+    let apiTabURL = null;
+    if (product === 'maps') {
+      apiTabURL = `/${baseUrl}/api/${MAP_SDK_VERSION}`;
+    } else if (product === 'navigation') {
+      apiTabURL = `/mapbox-navigation-ios/navigation/${NAVIGATION_VERSION}/`;
+    } else {
+      apiTabURL = '#';
     }
-    const currentProductId = pathPrefixMatch[1].slice(0, -1);
-    const subnavItems = productNavbarTabs[currentProductId];
-    const currentSubnavItemText = find(subnavItems, item => {
-      return normalizedPathname.indexOf(item.pathname) !== -1;
-    }).text;
-
-    const sideNavigation = (
-      <SideNavigation
-        currentPath={normalizedPathname}
-        siblingNavPages={orderedPages[pathPrefixMatch[1] + pathPrefixMatch[2]]}
-        childNavItems={props.frontMatter.sideNavSections}
-      />
-    );
-
-    const currentProduct = productNames[currentProductId];
-    const contentContainerClasses = classnames('pb96 wmax1200', {
-      'prose doc-ul doc-ol doc-ol-item': this.props.proseContent
-    });
+    const subFolders = [
+      {
+        name: 'Overview',
+        id: 'overview',
+        url: `/${baseUrl}/${folder}/overview/`
+      },
+      {
+        name: 'Examples',
+        id: 'examples',
+        url: `/${baseUrl}/${folder}/examples/`
+      },
+      {
+        name: 'Help',
+        id: 'help',
+        url: `/${baseUrl}/${folder}/help/`
+      },
+      {
+        name: 'API reference',
+        id: 'api',
+        url: apiTabURL
+      }
+    ];
+    const activeTab = location.pathname.split('/')[3];
 
     return (
-      <ReactPageShell
-        meta={{
-          title: `${props.frontMatter.title} | Android Documentation`,
-          description: props.frontMatter.description,
-          pathname: normalizedPathname
-        }}
-        includeHeader={false}
-        includeFooter={false}
-      >
-        <div
-          className="flex-parent flex-parent--column"
-          style={{ height: '100vh', overflow: 'hidden' }}
+      <ReactPageShell {...this.props} meta={meta} darkHeaderText={true}>
+        <div className="shell-header-buffer" />
+        <StickyTopNav
+          currentPath={location.pathname}
+          platform={platform}
+          product={productProper}
         >
-          <div className="flex-child">
-            <TopNavigation
-              currentPlatform="Android"
-              currentProduct={currentProduct}
-              subnavItems={subnavItems}
-              currentSubnavItemText={currentSubnavItemText}
-            />
-          </div>
-          <div className="flex-child pt12 scroll-styled scroll-auto">
-            <div className="limiter grid pb120">
-              {sideNavigation}
-              <div className="pt6 color-gray-dark content col col--12 col--offl3-mm col--9-mm">
-                {overviewHeader}
-                <div className={contentContainerClasses}>
-                  {props.children}
-                </div>
+          <div className="limiter">
+            <div className="grid grid--gut36 mr-neg36 mr0-mm">
+              <div className="col col--4-mm col--12">
+                <ProductMenu platform={platform} product={productProper} />
+              </div>
+              <div className="col col--8-mm col--12">
+                <TopNavTabs options={subFolders} activeTab={activeTab} />
               </div>
             </div>
           </div>
+        </StickyTopNav>
+        <div className="limiter">
+          <PageLayout
+            sidebarContent={sidebarContent}
+            product={product}
+            currentPath={location.pathname}
+          >
+            {title}
+            {children}
+          </PageLayout>
         </div>
       </ReactPageShell>
     );
