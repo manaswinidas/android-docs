@@ -43,6 +43,11 @@
   margin: 24px 0 36px 0;
 }
 
+.px48 {
+  padding-right: 48px !important;
+  padding-left: 48px !important;
+}
+
 .wmax900 {
   max-width: 900px !important;
 }
@@ -57,6 +62,29 @@
 
 .wmax480 {
   max-width: 480px !important;
+}
+
+@media screen and (min-width: 800px) {
+  .w480-ml {
+    width: 480px !important;
+  }
+  .px60-ml {
+    padding-right: 60px !important;
+    padding-left: 60px !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .w600-mxl {
+    width: 600px !important;
+  }
+  .px84-mxl {
+    padding-right: 84px !important;
+    padding-left: 84px !important;
+  }
+  .pt15-mxl {
+    padding-top: 15px !important;
+  }
 }
 
 .iphone-horizontal-padding {

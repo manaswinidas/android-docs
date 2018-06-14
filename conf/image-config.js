@@ -428,5 +428,12 @@ module.exports = {
   exampleDisplayRealTimeTraffic: {
     basename: 'example-display-real-time-traffic.png',
     sizes: [{ width: 1400 }]
+  },
+  //
+  // DEVICE FRAMES
+  //
+  pixel2FrameHorizontal: {
+    basename: 'pixel-2-device-frame.png',
+    sizes: [{ width: 1400 }]
   }
 };

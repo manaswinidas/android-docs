@@ -1,7 +1,7 @@
 ---
 title: Style lines using an identity property function
 description: Using an identity line-color property function for a visualization.
-thumbnail: thumbnailDdsLinePropertyStyling
+thumbnail: thumbnailGettingStartedSimpleMap
 topic: dynamic styling
 prependJs:
   - "import AppropriateImage from '../../../components/appropriate-image'"
