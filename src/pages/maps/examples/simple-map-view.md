@@ -11,12 +11,12 @@ prependJs:
 
 {{
   <AppropriateImage 
-    imageId="exampleSimpleMapView"
+    imageId="exampleASimpleMapView"
   />
 }}
 
 
-Any notes about this example would go here. 
+<!-- Any notes about this example would go here.  -->
 
 {{
   <ToggleableCodeBlock 

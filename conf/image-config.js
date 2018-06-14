@@ -33,6 +33,10 @@ module.exports = {
     basename: 'getting-started-dynamically-add-map.png',
     sizes: [{ width: 520 }]
   },
+  exampleStyleCirclesCategorically: {
+    basename: 'example-style-circles-categorically.png',
+    sizes: [{ width: 520 }]
+  },
   thumbnailStyleMapStudioStyle: {
     basename: 'style-map-studio-style.png',
     sizes: [{ width: 520 }]
@@ -165,8 +169,8 @@ module.exports = {
     basename: 'dds-color-zoom.gif',
     sizes: [{ width: 520 }]
   },
-  thumbnailDdsLinePropertyStyling: {
-    basename: 'dds-line-style-identity.png',
+  exampleStyleLinesUsingAsIdentityPropertyFunction: {
+    basename: 'example-style-lines-using-as-identity-property-function.png',
     sizes: [{ width: 520 }]
   },
   thumbnailDdsJSONVectorMerge: {
@@ -343,90 +347,86 @@ module.exports = {
     basename: 'example-map-matching.png',
     sizes: [{ width: 1400 }]
   },
-  exampleSimplifyPolyline: {
-    basename: 'example-simplify-polyline.png',
+  exampleSimplifyAPolyline: {
+    basename: 'example-simplify-a-polyline.png',
     sizes: [{ width: 1400 }]
   },
   //
   // MAPS SDK
   //
-  exampleIndoor3DMap: {
-    basename: 'example-indoor-3d-map.png',
+  exampleExtrudePolygonsFor3dIndoorMapping: {
+    basename: 'example-extrude-polygons-for-3d-indoor-mapping.png',
     sizes: [{ width: 1400 }]
   },
-  examplePopulationDensityExtrusion: {
-    basename: 'example-population-density-extrusion.png',
+  exampleDisplay3dBuildingHeightBasedOnVectorData: {
+    basename: 'example-display-3d-building-height-based-on vector-data.png',
     sizes: [{ width: 1400 }]
   },
-  examplePolygonHoles: {
-    basename: 'example-polygon-holes.png',
+  exampleDrawAPolygonWithHoles: {
+    basename: 'example-draw-a-polygon-with-holes.png',
     sizes: [{ width: 1400 }]
   },
-  exampleDrawPolygon: {
-    basename: 'example-draw-polygon.png',
+  exampleDrawAPolygon: {
+    basename: 'example-draw-a-polygon.png',
     sizes: [{ width: 1400 }]
   },
-  exampleDrawGeojsonLine: {
-    basename: 'example-draw-geojson-line.png',
+  exampleDrawGeojsonALine: {
+    basename: 'example-draw-a-geojson-line.png',
     sizes: [{ width: 1400 }]
   },
-  exampleMultipleGeometries: {
-    basename: 'example-multiple-geometries.png',
+  exampleDrawMultipleGeometries: {
+    basename: 'example-draw-multiple-geometries.png',
     sizes: [{ width: 1400 }]
   },
-  exampleStyleLineIdentityProperty: {
-    basename: 'example-style-line-identity-property.png',
+  exampleHillshading: {
+    basename: 'example-hillshading.png',
     sizes: [{ width: 1400 }]
   },
-  exampleHillShade: {
-    basename: 'example-hill-shade.png',
-    sizes: [{ width: 1400 }]
-  },
-  exampleImageSource: {
-    basename: 'example-image-source.png',
+  exampleUseAnImageSource: {
+    basename: 'example-use-an-image-source.png',
     sizes: [{ width: 1400 }]
   },
   exampleMapboxStudioStyle: {
     basename: 'example-mapbox-studio-style.png',
     sizes: [{ width: 1400 }]
   },
-  exampleGeojsonLayerInStack: {
-    basename: 'example-geojson-layer-in-stack.png',
+  exampleAddANewLayerBelowLabels: {
+    basename: 'example-add-a-new-layer-below-labels.png',
     sizes: [{ width: 1400 }]
   },
-  exampleAddWmsSource: {
-    basename: 'example-add-wms-source.png',
+  exampleAddAWmsSource: {
+    basename: 'example-add-a-wms-source.png',
     sizes: [{ width: 1400 }]
   },
-  exampleVectorSource: {
-    basename: 'example-vector-source.png',
+  exampleAddAVectorTileSource: {
+    basename: 'example-add-a-vector-tile-source.png',
     sizes: [{ width: 1400 }]
   },
-  exampleLineLayer: {
-    basename: 'example-line-layer.png',
+  exampleCreateALineLayer: {
+    basename: 'example-create-a-line-layer.png',
     sizes: [{ width: 1400 }]
   },
-  exampleMapboxMapOption: {
-    basename: 'example-mapbox-map-option.png',
+  exampleDynamicallyBuildAMapView: {
+    basename: 'example-dynamically-build-a-map-view.png',
     sizes: [{ width: 1400 }]
   },
   exampleSupportMapFragment: {
     basename: 'example-support-map-fragment.png',
     sizes: [{ width: 1400 }]
   },
-  exampleSimpleMapView: {
-    basename: 'example-simple-map-view.png',
+  exampleASimpleMapView: {
+    basename: 'example-a-simple-map-view.png',
     sizes: [{ width: 1400 }]
   },
   //
   // PLUGINS
   //
-  exampleBuildingPlugin: {
-    basename: 'example-building-plugin.png',
+  exampleDisplayBuildingsIn3d: {
+    basename: 'example-display-buildings-in-3d.png',
     sizes: [{ width: 1400 }]
   },
-  exampleTrafficPlugin: {
-    basename: 'example-traffic-plugin.png',
+  exampleDisplayRealTimeTraffic: {
+    basename: 'example-display-real-time-traffic.png',
     sizes: [{ width: 1400 }]
   }
 };

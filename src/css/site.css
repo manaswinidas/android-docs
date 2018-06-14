@@ -39,6 +39,10 @@
   text-align: center;
 }
 
+#docs-content.prose img {
+  margin: 24px 0 36px 0;
+}
+
 .wmax900 {
   max-width: 900px !important;
 }
