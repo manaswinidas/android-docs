@@ -3,20 +3,19 @@ title: Draw multiple geometries
 description: TBD
 thumbnail: thumbnailGettingStartedSimpleMap
 topic: add features to a map
-visualExample:
-  filename: exampleMultipleGeometries
-  fileFormat: png
-  rotation: horizontal
 prependJs:
-  - "import CodeLanguageToggle from '../../../components/code-language-toggle'"
+  - "import AppropriateImage from '../../../components/appropriate-image'"
   - "import ToggleableCodeBlock from '../../../components/toggleable-code-block'"
   - "import { MultipleGeometriesActivity } from '../../../example-code/MultipleGeometriesActivity.js'"
 ---
 
-Any notes about this example would go here. 
+{{
+  <AppropriateImage imageId="exampleDrawMultipleGeometries" />
+}}
+
+<!-- Any notes about this example would go here.  -->
 
 {{
-  <CodeLanguageToggle />
   <ToggleableCodeBlock 
     codeSnippet={MultipleGeometriesActivity}
   />

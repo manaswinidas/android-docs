@@ -3,21 +3,22 @@ title: Add a hillshade layer
 description: TBD
 thumbnail: thumbnailGettingStartedSimpleMap
 topic: dynamic styling
-visualExample:
-  filename: exampleHillShade
-  fileFormat: png
-  rotation: horizontal
 prependJs:
-  - "import CodeLanguageToggle from '../../../components/code-language-toggle'"
+  - "import AppropriateImage from '../../../components/appropriate-image'"
   - "import ToggleableCodeBlock from '../../../components/toggleable-code-block'"
   - "import { HillShadeActivity } from '../../../example-code/HillShadeActivity.js'"
 ---
 
-Any notes about this example would go here. 
+{{
+  <AppropriateImage 
+    imageId="exampleHillshading"
+  />
+}}
+
+<!-- Any notes about this example would go here.  -->
 
 {{
-  <CodeLanguageToggle />
   <ToggleableCodeBlock 
-    codeSnippet={HillShadeActivity}
+    codeSnippet={exampleHillshading}
   />
 }}
