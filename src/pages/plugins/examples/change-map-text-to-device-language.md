@@ -8,6 +8,8 @@ prependJs:
   - "import { LocalizationPluginActivity } from '../../../example-code/LocalizationPluginActivity.js'"
 ---
 
+<!-- BROKEN DEMO -->
+
 <!-- Any notes about this example would go here.  -->
 
 {{
