@@ -1,5 +1,5 @@
 /*---
-title: 'Mapbox Java SDK Examples'
+title: 'Examples'
 description: 'Mapbox Java SDK code examples'
 product: 'java-sdk'
 ---*/

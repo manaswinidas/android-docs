@@ -109,6 +109,16 @@ module.exports = () => {
             };
           });
         return examples;
+      },
+      listSubFolders: data => {
+        const folders = data.pages
+          .filter(file => {
+            return file.path.split('/').length === 5;
+          })
+          .map(folder => {
+            return folder;
+          });
+        return folders;
       }
     },
     webpackLoaders: [

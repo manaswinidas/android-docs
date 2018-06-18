@@ -7,9 +7,9 @@ import { StickyTopNav } from './sticky-top-nav';
 import { PageLayout } from './page-layout';
 import { ProductMenu } from './product-menu';
 import { TopNavTabs } from './top-nav-tabs';
+import listSubFolders from '@mapbox/batfish/data/list-sub-folders';
 import listExamples from '@mapbox/batfish/data/list-examples';
 import orderedPages from '@mapbox/batfish/data/ordered-pages';
-// import survey from '@mapbox/react-simple-surveyor';
 import { MAP_SDK_VERSION, NAVIGATION_VERSION } from '../constants';
 
 class PageShell extends React.Component {
@@ -95,28 +95,39 @@ class PageShell extends React.Component {
     } else {
       apiTabURL = '#';
     }
-    const subFolders = [
-      {
-        name: 'Overview',
-        id: 'overview',
-        url: `/${baseUrl}/${folder}/overview/`
-      },
-      {
-        name: 'Examples',
-        id: 'examples',
-        url: `/${baseUrl}/${folder}/examples/`
-      },
-      {
-        name: 'Help',
-        id: 'help',
-        url: `/${baseUrl}/${folder}/help/`
-      },
-      {
-        name: 'API reference',
-        id: 'api',
-        url: apiTabURL
-      }
-    ];
+
+    const subFolders = listSubFolders
+      .filter(folder => {
+        return (
+          folder.path.indexOf(product) > -1 &&
+          folder.path.indexOf('overview') < 0
+        );
+      })
+      .map(tab => {
+        let title = '';
+        if (tab.frontMatter.title === 'Introduction') {
+          title = 'Overview';
+        } else {
+          title = tab.frontMatter.title;
+        }
+        return {
+          name: title,
+          id: tab.path.split('/')[3],
+          url: tab.path
+        };
+      });
+
+    subFolders.unshift({
+      name: 'Overview',
+      id: 'overview',
+      path: `/${baseUrl}/${folder}/overview/`
+    });
+    subFolders.push({
+      name: 'API reference',
+      id: 'api',
+      url: apiTabURL
+    });
+
     const activeTab = location.pathname.split('/')[3];
 
     return (

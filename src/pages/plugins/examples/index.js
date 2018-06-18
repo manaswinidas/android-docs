@@ -1,5 +1,5 @@
 /*---
-title: 'Mapbox Plugins for Android'
+title: 'Examples'
 description: 'Working code examples of Mapbox Plugins for Android'
 product: 'plugins'
 ---*/
