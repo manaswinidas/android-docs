@@ -1,8 +1,8 @@
 ---
 title: Add a hillshade layer
 description: TBD
-thumbnail: thumbnailGettingStartedSimpleMap
-topic: dynamic styling
+thumbnail: thumbnailAddAHillshadeLayer
+topic: Dynamic styling
 prependJs:
   - "import AppropriateImage from '../../../components/appropriate-image'"
   - "import ToggleableCodeBlock from '../../../components/toggleable-code-block'"
@@ -11,7 +11,7 @@ prependJs:
 
 {{
   <AppropriateImage 
-    imageId="exampleHillshading"
+    imageId="exampleAddAHillshadeLayer"
   />
 }}
 
@@ -19,6 +19,6 @@ prependJs:
 
 {{
   <ToggleableCodeBlock 
-    codeSnippet={exampleHillshading}
+    codeSnippet={HillShadeActivity}
   />
 }}

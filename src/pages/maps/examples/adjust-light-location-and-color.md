@@ -1,12 +1,22 @@
 ---
 title: Adjust light location and color
 description: Change the location and color of the light that's shined on extrusions
-thumbnail: thumbnail3dExtrusionsExtrusionLight
+thumbnail: thumbnailAdjustLightLocationAndColor
 topic: 3D
 prependJs:
+  - "import { VideoWithDeviceFrame } from '../../../components/video-with-device-frame'"
+  - "import videoAdjustLightLocationColor from '../../../video/example-adjustlightlocationcolor.mp4'"
   - "import ToggleableCodeBlock from '../../../components/toggleable-code-block'"
   - "import { AdjustExtrusionLightActivity } from '../../../example-code/AdjustExtrusionLightActivity.js'"
 ---
+
+{{
+  <VideoWithDeviceFrame 
+    videoFile={videoAdjustLightLocationColor}
+    rotation="horizontal"
+    device="pixel-2"
+  />
+}}
 
 <!-- Any notes about this example would go here.  -->
 

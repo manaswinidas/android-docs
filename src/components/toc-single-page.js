@@ -66,7 +66,15 @@ class TocSinglePage extends React.PureComponent {
       const examplesByProduct = listExamples.filter(example => {
         return example.path.indexOf(this.props.product) > -1;
       });
-      const exampleCategories = getCategoriesForProduct(examplesByProduct);
+      let exampleCategories = getCategoriesForProduct(examplesByProduct).filter(
+        category => {
+          return category.title !== 'Getting started';
+        }
+      );
+      exampleCategories.unshift({
+        title: 'Getting started',
+        path: '#getting-started'
+      });
       const examplesByCategory = exampleCategories.map(category => {
         const examplesLists = examplesByProduct.filter(example => {
           return example.topic === category.title;

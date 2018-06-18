@@ -18,7 +18,15 @@ class ExamplesPage extends React.PureComponent {
     const examplesByProduct = listExamples.filter(example => {
       return example.path.indexOf(this.props.frontMatter.product) > -1;
     });
-    const uniqueCategories = getCategoriesForProduct(examplesByProduct);
+    let uniqueCategories = getCategoriesForProduct(examplesByProduct).filter(
+      category => {
+        return category.title !== 'Getting started';
+      }
+    );
+    uniqueCategories.unshift({
+      title: 'Getting started',
+      path: '#getting-started'
+    });
     const exampleSections = uniqueCategories.map((category, index) => {
       const examplesByCategory = examplesByProduct.filter(example => {
         return example.topic === category.title;

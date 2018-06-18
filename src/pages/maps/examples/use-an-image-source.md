@@ -1,8 +1,8 @@
 ---
 title: Use an image source
 description: TBD
-thumbnail: thumbnailGettingStartedSimpleMap
-topic: dynamic styling
+thumbnail: thumbnailUseAnImageSource
+topic: Dynamic styling
 prependJs:
   - "import AppropriateImage from '../../../components/appropriate-image'"
   - "import ToggleableCodeBlock from '../../../components/toggleable-code-block'"

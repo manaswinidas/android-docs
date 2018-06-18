@@ -1,8 +1,8 @@
 ---
 title: Change a map's language
 description: Switch the map's language dynamically.
-thumbnail: thumbnailStyleMapChangeMapLanguage
-topic: dynamic styling
+thumbnail: thumbnailChangeAMapsLanguage
+topic: Dynamic styling
 prependJs:
   - "import { VideoWithDeviceFrame } from '../../../components/video-with-device-frame'"
   - "import videoChangeAMapsLanguage from '../../../video/example-changeamapslanguage.mp4'"

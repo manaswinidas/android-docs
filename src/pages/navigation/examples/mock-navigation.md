@@ -1,7 +1,7 @@
 ---
 title: Mock navigation
 description: Mock a navigation session using a mock location engine. 
-topic: getting started
+topic: Getting started
 thumbnail: thumbnailMockNavigation
 prependJs:
   - "import AppropriateImage from '../../../components/appropriate-image'"

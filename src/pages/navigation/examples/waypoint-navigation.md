@@ -1,7 +1,7 @@
 ---
 title: Waypoint navigation
 description: Navigation with waypoints between destinations.
-topic: getting started
+topic: Getting started
 thumbnail: thumbnailWaypointNavigation
 prependJs:
   - "import AppropriateImage from '../../../components/appropriate-image'"

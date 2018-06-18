@@ -1,8 +1,8 @@
 ---
 title: Draw multiple geometries
 description: TBD
-thumbnail: thumbnailGettingStartedSimpleMap
-topic: add features to a map
+thumbnail: thumbnailDrawMultipleGeometries
+topic: Add features to a map
 prependJs:
   - "import AppropriateImage from '../../../components/appropriate-image'"
   - "import ToggleableCodeBlock from '../../../components/toggleable-code-block'"

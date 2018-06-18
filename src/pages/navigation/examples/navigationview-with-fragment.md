@@ -1,7 +1,7 @@
 ---
 title: NavigationView with Fragment
 description: NavigationView implemented with Fragment.
-topic: getting started
+topic: Getting started
 thumbnail: thumbnailNavigationViewWithFragment
 prependJs:
   - "import AppropriateImage from '../../../components/appropriate-image'"

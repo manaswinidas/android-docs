@@ -1,7 +1,7 @@
 ---
 title: Navigation views
 description: Create a drop-in navigation UI experience.
-topic: getting started
+topic: Getting started
 thumbnail: thumbnailNavigationView
 prependJs:
   - "import AppropriateImage from '../../../components/appropriate-image'"

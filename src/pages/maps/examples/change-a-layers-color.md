@@ -1,8 +1,8 @@
 ---
 title: Change a layer's color
 description: Using layer set to change a layer's fill color.
-thumbnail: thumbnailStyleMapCustomColors
-topic: dynamic styling
+thumbnail: thumbnailChangeALayersColor
+topic: Dynamic styling
 prependJs:
   - "import { VideoWithDeviceFrame } from '../../../components/video-with-device-frame'"
   - "import videoChangeALayersColor from '../../../video/example-changealayerscolor.mp4'"

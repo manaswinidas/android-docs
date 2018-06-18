@@ -1,8 +1,8 @@
 ---
 title: Style circles categorically
 description: Using a categorical circle-color property function for a visualization.
-thumbnail: thumbnailDdsCategoricallyDds
-topic: dynamic styling
+thumbnail: thumbnailStyleCirclesCategorically
+topic: Dynamic styling
 prependJs:
   - "import AppropriateImage from '../../../components/appropriate-image'"
   - "import ToggleableCodeBlock from '../../../components/toggleable-code-block'"

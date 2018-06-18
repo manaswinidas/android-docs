@@ -1,7 +1,7 @@
 ---
 title: Navigation map route
 description: Shows different styles using NavigationMapRoute.
-topic: getting started
+topic: Getting started
 thumbnail: thumbnailNavigationMapRoute
 prependJs:
   - "import AppropriateImage from '../../../components/appropriate-image'"

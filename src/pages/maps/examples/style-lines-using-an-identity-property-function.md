@@ -1,8 +1,8 @@
 ---
 title: Style lines using an identity property function
 description: Using an identity line-color property function for a visualization.
-thumbnail: thumbnailGettingStartedSimpleMap
-topic: dynamic styling
+thumbnail: thumbnailStyleLinesUsingAsIdentityPropertyFunction
+topic: Dynamic styling
 prependJs:
   - "import AppropriateImage from '../../../components/appropriate-image'"
   - "import ToggleableCodeBlock from '../../../components/toggleable-code-block'"

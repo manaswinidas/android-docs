@@ -2,21 +2,25 @@
 title: Get a travel time matrix
 description: Calculate travel times between many points.
 thumbnail: thumbnailMatrix
-topic: getting started
-visualExample:
-  filename: thumbnailGettingStartedSimpleMap
-  fileFormat: png
-  rotation: horizontal
+topic: Getting started
 prependJs:
-  - "import CodeLanguageToggle from '../../../components/code-language-toggle'"
+  - "import { VideoWithDeviceFrame } from '../../../components/video-with-device-frame'"
+  - "import videoGetATravelTimeMatrix from '../../../video/example-directionsmatrixapi.mp4'"
   - "import ToggleableCodeBlock from '../../../components/toggleable-code-block'"
   - "import { MatrixApiActivity } from '../../../example-code/MatrixApiActivity.js'"
 ---
 
-Any notes about this example would go here. 
+{{
+  <VideoWithDeviceFrame 
+    videoFile={videoGetATravelTimeMatrix}
+    rotation="horizontal"
+    device="pixel-2"
+  />
+}}
+
+<!-- Any notes about this example would go here.  -->
 
 {{
-  <CodeLanguageToggle />
   <ToggleableCodeBlock 
     codeSnippet={MatrixApiActivity}
   />

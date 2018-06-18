@@ -1,7 +1,7 @@
 ---
 title: Embedded navigation
 description: Navigation in a view which contains other views.
-topic: getting started
+topic: Getting started
 thumbnail: thumbnailEmbeddedNavigation
 prependJs:
   - "import AppropriateImage from '../../../components/appropriate-image'"

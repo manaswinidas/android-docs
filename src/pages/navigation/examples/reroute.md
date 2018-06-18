@@ -1,7 +1,7 @@
 ---
 title: Reroute
 description: Test the reroute feature inside the Navigation SDK for Android.
-topic: getting started
+topic: Getting started
 thumbnail: thumbnailReroute
 prependJs:
   - "import AppropriateImage from '../../../components/appropriate-image'"

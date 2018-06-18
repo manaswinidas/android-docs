@@ -1,8 +1,8 @@
 ---
 title: Draw a GeoJSON line
 description: Draw a polyline by parsing a GeoJSON file with the Map SDK.
-thumbnail: thumbnailAnnotationsPolyline
-topic: add features to a map
+thumbnail: thumbnailDrawAGeojsonLine
+topic: Add features to a map
 prependJs:
   - "import AppropriateImage from '../../../components/appropriate-image'"
   - "import ToggleableCodeBlock from '../../../components/toggleable-code-block'"

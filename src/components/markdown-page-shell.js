@@ -9,11 +9,18 @@ export default class MarkdownPageShell extends React.Component {
     frontMatter: PropTypes.shape({
       title: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
-      visualExample: PropTypes.shape({
-        filename: PropTypes.string,
-        rotation: PropTypes.oneOf(['horizontal', 'vertical']),
-        fileFormat: PropTypes.oneOf(['png', 'mp4'])
-      }),
+      topic: PropTypes.oneOf([
+        'Getting started',
+        'Dynamic styling',
+        'Data visualization',
+        '3D',
+        'Add markers and infoWindows to the map',
+        'User interaction',
+        'Add features to a map',
+        'Set a map style',
+        'Image generation',
+        'Offline'
+      ]),
       headings: PropTypes.arrayOf(
         PropTypes.shape({
           level: PropTypes.number.isRequired,

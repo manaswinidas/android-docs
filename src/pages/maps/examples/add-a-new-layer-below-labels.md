@@ -1,8 +1,8 @@
 ---
 title: Add a new layer below labels
 description: Using the second argument of addLayerBelow, you can be more precise where your layer ends up in the map stack.
-thumbnail: thumbnailStyleMapGeojsonLayer
-topic: dynamic styling
+thumbnail: thumbnailAddANewLayerBelowLabels
+topic: Dynamic styling
 prependJs:
   - "import AppropriateImage from '../../../components/appropriate-image'"
   - "import ToggleableCodeBlock from '../../../components/toggleable-code-block'"

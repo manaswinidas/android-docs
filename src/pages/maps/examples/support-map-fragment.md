@@ -1,8 +1,8 @@
 ---
 title: Support map fragment
 description: Include a map fragment within your app using Android support library.
-thumbnail: thumbnailGettingStartedSupportFragment
-topic: getting started
+thumbnail: thumbnailSupportMapFragment
+topic: Getting started
 prependJs:
   - "import AppropriateImage from '../../../components/appropriate-image'"
   - "import ToggleableCodeBlock from '../../../components/toggleable-code-block'"

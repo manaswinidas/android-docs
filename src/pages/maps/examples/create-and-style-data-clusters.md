@@ -1,8 +1,8 @@
 ---
 title: Create and style data clusters
 description: Use GeoJSON to visualize point data in clusters.
-thumbnail: thumbnailStyleMapClustering
-topic: add markers
+thumbnail: thumbnailCreateAndStyleDataClusters
+topic: Add markers and infoWindows to the map
 prependJs:
   - "import { VideoWithDeviceFrame } from '../../../components/video-with-device-frame'"
   - "import videoCreateAndStyleClusters from '../../../video/example-createandstyleclusters.mp4'"
