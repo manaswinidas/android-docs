@@ -4,6 +4,7 @@ description: Simplify a polyline which, depending on the set tolerance, reduces 
 thumbnail: thumbnailSimplifyLine
 topic: Getting started
 prependJs:
+  - "import AppropriateImage from '../../../components/appropriate-image'"
   - "import ToggleableCodeBlock from '../../../components/toggleable-code-block'"
   - "import { SimplifyPolylineActivity } from '../../../example-code/SimplifyPolylineActivity.js'"
 ---
