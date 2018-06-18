@@ -1,6 +1,6 @@
 ---
 title: Display a heatmap
-description: TBD
+description: Add and customize a heatmap to visualize data.
 thumbnail: thumbnailDisplayAHeatmap
 topic: Data visualization
 prependJs:

@@ -1,6 +1,6 @@
 ---
 title: Add a hillshade layer
-description: TBD
+description: Use elevation data to show and customize hills and mountains.
 thumbnail: thumbnailAddAHillshadeLayer
 topic: Dynamic styling
 prependJs:

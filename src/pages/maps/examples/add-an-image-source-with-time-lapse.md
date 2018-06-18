@@ -1,6 +1,6 @@
 ---
 title: Add an image source with time lapse
-description: TBD
+description: Use an image source and a runnable to show data changes over time.
 thumbnail: thumbnailAddAnImageSourceWithTimeLapse
 topic: Dynamic styling
 prependJs:

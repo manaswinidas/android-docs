@@ -1,6 +1,6 @@
 ---
 title: Rotate extrusions
-description: TBD
+description: Rotate a map with 3D buildings.
 thumbnail: thumbnailRotateExtrusions
 topic: 3D
 prependJs:

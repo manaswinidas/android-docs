@@ -1,6 +1,6 @@
 ---
 title: Add multiple heatmap styles
-description: TBD
+description: Gain minute control over heat map coloring, size, density, and other styling.
 thumbnail: thumbnailAddMultipleHeatmapStyles
 topic: Data visualization
 prependJs:

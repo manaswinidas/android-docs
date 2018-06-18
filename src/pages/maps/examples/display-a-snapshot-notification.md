@@ -1,6 +1,6 @@
 ---
 title: Display a snapshot notification
-description: TBD
+description: Show a snapshotted map image in a notification.
 thumbnail: thumbnailDisplayASnapshotNotification
 topic: Image generation
 prependJs:
@@ -13,7 +13,7 @@ prependJs:
 {{
   <VideoWithDeviceFrame 
     videoFile={videoDisplayASnapshotNotification}
-    rotation="horizontal"
+    rotation="vertical"
     device="pixel-2"
   />
 }}

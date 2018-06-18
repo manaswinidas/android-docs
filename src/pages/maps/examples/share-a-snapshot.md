@@ -1,6 +1,6 @@
 ---
 title: Share a snapshot
-description: TBD
+description: Send and share a map snapshot image.
 thumbnail: thumbnailShareASnapshot
 topic: Image generation
 prependJs:
@@ -13,7 +13,7 @@ prependJs:
 {{
   <VideoWithDeviceFrame 
     videoFile={videoSnapshotShare}
-    rotation="horizontal"
+    rotation="vertical"
     device="pixel-2"
   />
 }}

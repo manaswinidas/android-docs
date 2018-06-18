@@ -1,6 +1,6 @@
 ---
 title: Use an image source
-description: TBD
+description: Use an image source to display images on the map.
 thumbnail: thumbnailUseAnImageSource
 topic: Dynamic styling
 prependJs:

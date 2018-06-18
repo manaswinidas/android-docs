@@ -1,6 +1,6 @@
 ---
 title: Switch map styles with a fade
-description: TBD
+description: Fade map styles in and out based on zoom level.
 thumbnail: thumbnailSwitchMapStylesWithAFade
 topic: Set a map style
 prependJs:

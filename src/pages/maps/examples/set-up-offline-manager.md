@@ -13,7 +13,7 @@ prependJs:
 {{
   <VideoWithDeviceFrame 
     videoFile={videoOfflineManager}
-    rotation="horizontal"
+    rotation="vertical"
     device="pixel-2"
   />
 }}

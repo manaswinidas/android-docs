@@ -1,6 +1,6 @@
 ---
 title: Draw multiple geometries
-description: TBD
+description: Gain minute control over heat map coloring, size, density, and other styling.
 thumbnail: thumbnailDrawMultipleGeometries
 topic: Add features to a map
 prependJs:

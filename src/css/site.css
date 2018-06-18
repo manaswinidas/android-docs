@@ -43,6 +43,10 @@
   margin: 24px 0 36px 0;
 }
 
+.pt90 {
+  padding-top: 90px !important;
+}
+
 .px48 {
   padding-right: 48px !important;
   padding-left: 48px !important;
@@ -50,6 +54,10 @@
 
 .wmax900 {
   max-width: 900px !important;
+}
+
+.w270 {
+  width: 270px !important;
 }
 
 .h480 {

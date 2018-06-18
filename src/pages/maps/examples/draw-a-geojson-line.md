@@ -10,7 +10,7 @@ prependJs:
 ---
 
 {{
-  <AppropriateImages imageId="exampleDrawGeojsonALine" />
+  <AppropriateImage imageId="exampleDrawGeojsonALine" />
 }}
 
 <!-- Any notes about this example would go here.  -->

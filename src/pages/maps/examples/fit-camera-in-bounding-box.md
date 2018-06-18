@@ -13,7 +13,7 @@ prependJs:
 {{
   <VideoWithDeviceFrame 
     videoFile={videoFitCameraInBoundingBox}
-    rotation="horizontal"
+    rotation="vertical"
     device="pixel-2"
   />
 }}

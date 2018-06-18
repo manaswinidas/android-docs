@@ -573,5 +573,9 @@ module.exports = {
   pixel2FrameHorizontal: {
     basename: 'pixel-2-device-frame.png',
     sizes: [{ width: 1400 }]
+  },
+  pixel2FrameVertical: {
+    basename: 'pixel-2-device-vertical.png',
+    sizes: [{ width: 1200 }]
   }
 };
