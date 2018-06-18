@@ -44,7 +44,7 @@ const ProductNavItems = [
         name: 'Web APIs'
       },
       {
-        url: '/android-docs/java-sdk/',
+        url: '/android-docs/java/',
         name: 'Java SDK'
       }
     ]

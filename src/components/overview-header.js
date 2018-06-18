@@ -6,8 +6,7 @@ import * as constants from '../constants';
 
 export class OverviewHeader extends React.PureComponent {
   static propTypes = {
-    productName: PropTypes.string.isRequired,
-    versionConstant: PropTypes.string.isRequired
+    productName: PropTypes.string.isRequired
   };
 
   render() {
@@ -19,15 +18,21 @@ export class OverviewHeader extends React.PureComponent {
         </li>
       );
     });
+    let version = null;
+    if (this.props.versionConstant) {
+      version = (
+        <p>
+          Current version: v{constants[this.props.versionConstant]}{' '}
+          <a href={this.props.changelogLink}>View changelog</a>
+        </p>
+      );
+    }
     return (
       <div className="scroll-hidden mt12 wmax960 relative border-b border--gray-light">
         <h1 className="mb6 txt-fancy">{this.props.productName}</h1>
         <div className="flex-parent flex-parent--space-between-main">
           <div className="flex-child mr240-ml mr0">
-            <p>
-              Current version: v{constants[this.props.versionConstant]}{' '}
-              <a href={this.props.changelogLink}>View changelog</a>
-            </p>
+            {version}
             <ul className="mb24" style={{ listStyle: 'none' }}>
               {featuresList}
             </ul>

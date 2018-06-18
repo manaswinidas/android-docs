@@ -1,7 +1,7 @@
 /*---
 title: 'Examples'
 description: 'Mapbox Java SDK code examples'
-product: 'java-sdk'
+product: 'java'
 ---*/
 
 import React from 'react';

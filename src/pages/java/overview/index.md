@@ -1,22 +1,12 @@
 ---
 title: "Introduction"
-description: "Official documentation on the Mapbox Java SDK"
-sideNavSections:
-  - title: "Support and contributions"
-  - title: "API reference"
-  - title: "Access tokens"
-  - title: "Position and Point objects"
-  - title: "Installation"
-  - title: "Gradle"
-  - title: "Maven"
-  - title: "Selectively compiling APIs"
+description: "Official documentation for the Mapbox Java SDK."
 overviewHeaderProps:
   imageId: overviewServicesSdk
-  sdk: Mapbox Java SDK
+  versionConstant: JAVA_SDK_VERSION
   changelogLink: "https://github.com/mapbox/mapbox-java/blob/master/CHANGELOG.md"
   ghLink: "https://github.com/mapbox/mapbox-java"
   installLink: "https://github.com/mapbox/mapbox-java"
-  versionConstant: JAVA_SDK_VERSION
   sdkFeatures:
     - Directions
     - Geocoding

@@ -56,10 +56,6 @@
   max-width: 900px !important;
 }
 
-.w270 {
-  width: 270px !important;
-}
-
 .h480 {
   height: 480px !important;
 }
@@ -101,7 +97,8 @@
   padding-left: 1%;
 }
 
-.unprose pre {
+.unprose pre,
+.prose pre {
   display: block;
   font-family: 'Menlo', 'Bitstream Vera Sans Mono', 'Monaco', 'Consolas',
     monospace;

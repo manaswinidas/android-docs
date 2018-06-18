@@ -15,7 +15,7 @@ The **Places plugin for Android** lets users search for a destination, explore w
 
 ## Install the Places plugin
 
-To start developing an application using the Places Plugin, you'll need to add the appropriate dependencies inside your `build.gradle` file. This dependency includes the Maps SDK for Android and the [Mapbox Java SDK's Geocoding API]({{prefixUrl('java-sdk/overview/geocoder/')}}). All dependencies given below can be found on MavenCentral.
+To start developing an application using the Places Plugin, you'll need to add the appropriate dependencies inside your `build.gradle` file. This dependency includes the Maps SDK for Android and the [Mapbox Java SDK's Geocoding API]({{prefixUrl('java/overview/geocoder/')}}). All dependencies given below can be found on MavenCentral.
 
 If your application is close or exceeds the 65k method count limit, you can mitigate this problem by enabling ProGuard inside your application. ProGuard directives are included in the Android dependencies to preserve the required classes.
 

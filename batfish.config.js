@@ -45,14 +45,14 @@ const productPageOrder = {
     'route-progress',
     'map-matching'
   ],
-  'java-sdk/overview/': [
+  'java/overview/': [
     'index',
     'directions-matrix',
     'geocoder',
     'optimization',
     'static-image'
   ],
-  'java-sdk/examples/': ['index'],
+  'java/examples/': ['index'],
   'core/overview/': ['index']
 };
 

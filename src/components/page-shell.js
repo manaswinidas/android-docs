@@ -91,7 +91,7 @@ class PageShell extends React.Component {
     if (product === 'maps') {
       apiTabURL = `/${baseUrl}/api/${MAP_SDK_VERSION}`;
     } else if (product === 'navigation') {
-      apiTabURL = `/mapbox-navigation-ios/navigation/${NAVIGATION_VERSION}/`;
+      apiTabURL = `/${baseUrl}/navigation-sdk/navigation/${NAVIGATION_VERSION}/`;
     } else {
       apiTabURL = '#';
     }
@@ -120,7 +120,7 @@ class PageShell extends React.Component {
     subFolders.unshift({
       name: 'Overview',
       id: 'overview',
-      path: `/${baseUrl}/${folder}/overview/`
+      url: `/${baseUrl}/${folder}/overview/`
     });
     subFolders.push({
       name: 'API reference',
