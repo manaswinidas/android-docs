@@ -44,7 +44,7 @@ class PageLayout extends React.Component {
   throttledHandleWindowResize = _.throttle(() => {
     const height = document.body.clientHeight;
     this.setState({
-      bottomBoundaryValue: height - 400
+      bottomBoundaryValue: height - 450
     });
   }, 200);
 
