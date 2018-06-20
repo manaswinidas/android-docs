@@ -32,8 +32,7 @@ This snapshot feature is different than [the Mapbox Static API](https://www.mapb
 The `MapSnapshotter` constructor requires `MapSnapshotter.Options` object. The options 
 
 ```java
-MapSnapshotter.Options snapShotOptions = new MapSnapshotter.Options(mapView.getMeasuredHeight(), 
-mapView.getMeasuredWidth());
+MapSnapshotter.Options snapShotOptions = new MapSnapshotter.Options(500, 500);
 
 snapShotOptions.withRegion(mapboxMap.getProjection().getVisibleRegion().latLngBounds);
 snapShotOptions.withStyle(mapboxMap.getStyleUrl());
