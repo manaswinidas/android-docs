@@ -19,9 +19,13 @@ The snapshot functionality of the Mapbox Maps SDK for Android generates a static
 - a list/recyclerview
 - wherever else a `Bitmap` can be placed
 
-You **don't** need any internet connection to use the map snapshotter feature. All of the snapshot work happens locally on the device. Snapshot generation can happen on the device's background thread, so don’t worry about compromising the user experience.
+A Mapbox map doesn't need to be displayed to use the snapshot functionality. `MapSnapshotter` can be invoked anywhere in the app.
 
-This snapshot feature is different than [the Mapbox Static API](https://www.mapbox.com/android-docs/java-sdk/overview/static-image). [The `MapboxStaticMap` class](https://github.com/mapbox/mapbox-java/blob/afe9e88c9a09a413405571678d17499aa0a5f25c/services-staticmap/src/main/java/com/mapbox/api/staticmap/v1/MapboxStaticMap.java) helps you build a URL to request a static map image which looks like an embedded map without interactivity or controls. However, unlike the map snapshot functionality, you'll need an internet connection to receive the image via `MapboxStaticMap` use.
+Unless you have the map tiles already cached, the device _will_ need an internet connection to download the style and tiles necessary to render the map, and thus, the snapshot.
+
+Snapshot generation can happen on the device's background thread, so don’t worry about compromising the user experience.
+
+This snapshot feature is different than [the Mapbox Static API](https://www.mapbox.com/android-docs/java-sdk/overview/static-image). [The `MapboxStaticMap` class](https://github.com/mapbox/mapbox-java/blob/afe9e88c9a09a413405571678d17499aa0a5f25c/services-staticmap/src/main/java/com/mapbox/api/staticmap/v1/MapboxStaticMap.java) helps you build a URL to request a static map image which looks like an embedded map without interactivity or controls. 
 
 ## Taking a map snapshot
 
