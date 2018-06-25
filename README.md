@@ -30,4 +30,4 @@ This will set up a server running at http://localhost:8080/android-docs/. If you
 
 ## Contributing new documentation
 
-If you'd like to add to this repo's Android documentation, please read [the contribution guide](android-docs/CONTRIBUTING.md) to learn how to get started.
+If you'd like to add to this repo's Android documentation, please read [the contribution guide](/CONTRIBUTING.md) to learn how to get started.
