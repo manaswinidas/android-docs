@@ -153,6 +153,24 @@ onLowMemory();
 onDestroy();
 ```
 
+### 6. Java 8
+
+If you're using an Android Studio version that is `3.1.0` or above, you can ignore this section because the new dex compiler D8 will be enabled by default.
+
+The Mapbox Maps SDK for Android introduces the use of Java 8. To fix any Java versioning issues, ensure that you are using Gradle version of 3.0 or greater. Once you’ve done that, add the following compileOptions to the `android` section of your app-level build.gradle file like so:
+
+```
+android {
+  ...
+  compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+```
+
+This can also be done via your project settings (File > Project Structure > Your_Module > Source Compatibility / Target Compatibility). 
+
 ## Attribution
 
 {{
